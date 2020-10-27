@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Paper Scissors Rock</title>
+</head>
+<body>
+    <div class="container">
+        <div class="player-container">
+            <div class="player-graphic"><img class="player-img" data-action="player" src="img/paper.png" alt=""></div>
+            <div class="player-graphic"><img class="player-img" data-action="player" src="img/scissors.png" alt=""></div>
+            <div class="player-graphic"><img class="player-img" data-action="player" src="img/rock.png" alt=""></div>
+        </div>
+        <div class="computer-container">
+            <div class="computer-graphic"><img class="computer-img" data-action="computer" src="img/paper.png" alt=""></div>
+            <div class="computer-graphic"><img class="computer-img" data-action="computer" src="img/scissors.png" alt=""></div>
+            <div class="computer-graphic"><img class="computer-img" data-action="computer" src="img/rock.png" alt=""></div>
+        </div>
+        <div class="panel">
+            <input type = "image" class = "button paper" src="img/paper.png" value ="0"></input>
+            <input type = "image" class = "button scissors" src="img/scissors.png" value = "1"></input>
+            <input type = "image" class = "button rock" src="img/rock.png" value = "2"></input>
+        </div>
+    </div>
+    <div class="result-container">
+        <div class="result-graphic"></div>
+    </div>
+</body>
+<script src = "script.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+</html>
