@@ -1,0 +1,112 @@
+@font-face{
+    font-family: "Neue Haas Grotesk";
+    src: url("https://type.cargo.site/files/NeueHaasGroteskText-Regular.woff") format("woff");
+    font-style: normal;
+    font-weight: lighter;
+    unicode-range: U+0000-DFFF, U+F900-FFFD;
+}
+html {
+	font-family: "Neue Haas Grotesk";
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+img{
+    width: 70%;
+    border-radius: 29%;
+    transition-duration: 0.5s;
+}
+input{
+    width:8%;
+    outline:0; /* */
+    border-radius: 30%;
+    transition-duration: 1s;
+    transform: scale(1);
+}
+input:hover{
+    transform: scale(1.5);
+    transform: translateY(-10px);
+}
+.container{
+    display:grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "player-container computer-container"
+    "panel panel";
+}
+.player-container, .computer-container{
+    position: relative;
+    vertical-align: bottom;
+    height: 70vh;
+}
+.player-container{
+    /* border: 1px solid black; */
+    grid-area: player-container;
+}
+.computer-container{
+    /* border: 1px solid black; */
+    text-align: right; /* 이미지 오른쪽 최대로 붙임 */
+    grid-area: computer-container;
+}
+.result-container{
+    position: absolute;
+    border: 1 solid black;
+    top: 50%;
+    left: 45%;
+    transition-duration: 2s;
+}
+.result-graphic{
+    font-size:4vw;
+    animation-duration: 3s;
+    animation-name: boom;
+}
+
+@keyframes boom{
+    from {
+        font-size: 2vw;
+    }
+    to {
+        font-size: 4vw;
+    }
+}
+.panel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*border: 1px solid black;*/
+    height: 20vh;
+    margin-top: 2vh;
+    grid-area: panel;
+}
+.player-graphic{
+    position: absolute;
+    opacity: 0;
+    left: 0;
+    bottom: 0;
+}
+.computer-graphic{
+    position: absolute;
+    opacity: 0;
+    right: 0;
+    bottom: 0;
+}
+.player-img{
+    vertical-align: bottom;
+    transform: rotateX(30deg) rotate(-30deg);
+}
+.computer-img{
+    vertical-align: bottom;
+    transform: rotateX(30deg) rotate(30deg) scaleX(-1);
+}
+.player-graphic.visible .player-img {
+    transform: translateX(13vw) rotateX(30deg) rotate(15deg);
+}
+.computer-graphic.visible .computer-img {
+    transform: translateX(-13vw) rotateX(30deg) rotate(-15deg) scaleX(-1);
+}
+.visible{
+    opacity: 1;
+}
