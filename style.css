@@ -37,7 +37,6 @@ input:hover{
     grid-template-areas: 
     "player-container computer-container"
     "panel panel";
-    background-color: #808080;
 }
 .player-container, .computer-container{
     position: relative;
